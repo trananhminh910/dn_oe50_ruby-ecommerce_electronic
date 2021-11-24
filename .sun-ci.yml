@@ -1,3 +1,5 @@
+workspace: true
+
 stages:
 - build
 - test
