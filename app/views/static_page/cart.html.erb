@@ -1,0 +1,73 @@
+<% provide(:title, t("pages.cart")) %>
+<div class="cart_page">
+  <div class="container cart_height">
+    <table id="cart" class="table table-hover table-condensed">
+      <thead>
+        <tr>
+          <th style="width:50%"><%= t "pages.product_name" %></th>
+          <th style="width:10%"><%= t "pages.price" %></th>
+          <th style="width:8%"><%= t "pages.quantity" %></th>
+          <th style="width:22%" class="text-center"><%= t "pages.actual_price" %></th>
+          <th style="width:10%"> </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="row">
+              <div class="col-sm-2 hidden-xs">
+                <img src="/assets/computer.jpg" alt="Sản phẩm 1" class="img-responsive" width="100">
+              </div>
+              <div class="col-sm-10">
+                <h4 class="product_name">Sản phẩm 1</h4>
+                <p>Mô tả của sản phẩm 1</p>
+              </div>
+            </div>
+          </td>
+          <td class="product_price">200.000 đ</td>
+          <td class="quantity">
+            <input class="form-control text-center" value="1" type="number">
+          </td>
+          <td data-th="subtotal" class="text-center">200.000 đ</td>
+          <td class="actions">
+            <a href="#" class="btn btn-warning btn-block"><%= t "pages.update" %> <i class="fa fa-angle-right"></i></a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="row">
+              <div class="col-sm-2 hidden-xs">
+                <img src="/assets/computer.jpg" alt="Sản phẩm 1" class="img-responsive" width="100">
+              </div>
+              <div class="col-sm-10">
+                <h4 class="product_name">Sản phẩm 2</h4>
+                <p>Mô tả của sản phẩm 2</p>
+              </div>
+            </div>
+          </td>
+          <td class="product_price">300.000 đ</td>
+          <td class="quantity">
+            <input class="form-control text-center" value="1" type="number">
+          </td>
+          <td data-th="subtotal" class="text-center">300.000 đ</td>
+          <td class="actions">
+            <a href="#" class="btn btn-warning btn-block"><%= t "pages.update" %> <i class="fa fa-angle-right"></i></a>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr class="visible-xs">
+          <td class="text-center"><strong>Tổng 200.000 đ</strong></td>
+        </tr>
+        <tr>
+          <td><a href="#" class="btn btn-info"><i class="fa fa-angle-left"></i> <%= t "pages.continue_buy" %></a>
+          </td>
+          <td colspan="2" class="hidden-xs"> </td>
+          <td class="hidden-xs text-center"><strong><%= t "pages.total_of_money" %> 500.000 đ</strong></td>
+          <td><a href="#" class="btn btn-success btn-block"><%= t "pages.pay" %> <i class="fa fa-angle-right"></i></a>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
