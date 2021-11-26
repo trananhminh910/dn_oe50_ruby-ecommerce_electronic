@@ -1,0 +1,12 @@
+<aside class="left_widgets p_filter_widgets">
+  <div class="l_w_title">
+    <h3><%= t "pages.brand" %></h3>
+  </div>
+  <div class="widgets_inner">
+    <ul class="list">
+      <% @brands.each do |brand| %>
+        <li><a href="#"><%= brand.name %></a></li>
+      <% end %>
+    </ul>
+  </div>
+</aside>

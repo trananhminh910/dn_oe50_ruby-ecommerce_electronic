@@ -19,6 +19,17 @@ en:
     quantity: "Quantity"
     actual_price: "Actual price"
     total_of_money: "Total:"
+    empty_product: "There are currently no products"
+    details:
+      total_rate: "%{rate_count} rates"
+      price_product: "Price: %{price}"
+      buy_now: "Buy now"
+      add_to_cart: "Add to cart"
+      residual: "%{residual} products are available"
+  format:
+    vnd: "VND"
+  flash:
+    not_found_product: "No information found for this product"
     vi: "VI"
     en: "EN"
   sessions:
