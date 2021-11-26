@@ -1,5 +1,9 @@
 en:
   pages:
+    logout: "Logout"
+    settings: "Settings"
+    profile: "Profile"
+    account: "Account"
     title: "Electronic"
     home: "Home"
     cart: "Cart"
@@ -17,3 +21,13 @@ en:
     total_of_money: "Total:"
     vi: "VI"
     en: "EN"
+  sessions:
+    log_in: "Login"
+    email: "Email"
+    password: "Password"
+    new_user: "don't account yet!"
+    sign_up_now: "Sign up now"
+    invalid_email_password: "invalid email or password!"
+    login_please: "Let login with your account, please!"
+    admin_please: "You isn't Admin role"
+    error_not_find: "user not find"

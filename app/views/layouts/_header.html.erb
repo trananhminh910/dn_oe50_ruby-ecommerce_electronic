@@ -1,13 +1,28 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar navbar-fixed-top navbar-inverse header">
   <div class="container">
     <%= link_to t("pages.title"), "#", id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to t("pages.home"), root_path %></li>
         <li><%= link_to t("pages.cart"), cart_path %></li>
-        <li><%= link_to t("pages.login"), "#" %></li>
         <li><%= link_to t("pages.vi"), locale:"vi" %></li>
         <li><%= link_to t("pages.en"), locale:"en" %></li>
+        <% if logged_in? %>
+          <li class="dropdown">
+            <%= link_to "#", class: "dropdown-toggle", "data-toggle": "dropdown" do %>
+              <%= t "pages.account" %>
+              <b class="caret"></b>
+            <% end %>
+            <ul class="dropdown-menu">
+              <li><%= link_to t("pages.profile"), "#" %></li>
+              <li><%= link_to t("pages.settings"), "#" %></li>
+              <li class="divider"></li>
+              <li> <%= link_to t("pages.logout"), logout_path, method: :delete %></li>
+            </ul>
+          </li>
+          <% else %>
+            <li><%= link_to t("pages.login"), login_path %></li>
+        <% end %>
       </ul>
     </nav>
   </div>
