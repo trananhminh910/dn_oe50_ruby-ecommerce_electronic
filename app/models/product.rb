@@ -4,4 +4,8 @@ class Product < ApplicationRecord
   has_many :rates, dependent: :destroy
 
   scope :asc_order, ->{order :price}
+
+  def check_residual_quantity? quantity_params
+    quantity_params.positive? && residual >= quantity_params
+  end
 end

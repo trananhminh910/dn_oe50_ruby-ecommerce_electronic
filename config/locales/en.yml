@@ -11,7 +11,7 @@ en:
     login: "Login"
     category: "Category"
     brand: "Brand"
-    update: "Update"
+    remove: "Remove"
     pay: "Pay"
     continue_buy: "Continue to buy"
     product_name: "Product name"
@@ -30,6 +30,9 @@ en:
     vnd: "VND"
   flash:
     not_found_product: "No information found for this product"
+    cart_success: "The product has been added to cart"
+    cart_update: "The product has been updated to the quantity in the cart"
+    not_enough: "Current product is not enough"
     vi: "VI"
     en: "EN"
   sessions:

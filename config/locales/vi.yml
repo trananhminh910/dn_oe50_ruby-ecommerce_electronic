@@ -11,7 +11,7 @@ vi:
     login: "Đăng nhập"
     category: "Danh mục"
     brand: "Thương hiệu"
-    update: "Cập nhật"
+    remove: "Xóa"
     pay: "Thanh toán"
     continue_buy: "Tiếp tục mua hàng"
     product_name: "Tên sản phẩm"
@@ -30,6 +30,9 @@ vi:
     vnd: "VND"
   flash:
     not_found_product: "Không tìm thấy thông tin cho sản phẩm này"
+    cart_success: "Sản phẩm đã được thêm vào giỏ hàng"
+    cart_update: "Sản phẩm đã được cập nhật số lượng trong giỏ hàng"
+    not_enough: "Sản phẩm hiện tại không đủ"
     vi: "VI"
     en: "EN"
   sessions:

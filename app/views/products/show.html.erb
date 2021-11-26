@@ -40,9 +40,7 @@
             <a href="#">
               <button class="add-to-cart btn btn-default" type="button"><%= t "pages.details.buy_now" %></button>
             </a>
-            <a href="#">
-              <button class="add-to-cart btn btn-default" type="button"><%= t "pages.details.add_to_cart" %></button>
-            </a>
+            <%= link_to t("pages.details.add_to_cart"), add_to_carts_path(@product, quantity: 1)%>
           </div>
         </div>
       </div>
