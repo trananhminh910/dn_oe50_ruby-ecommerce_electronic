@@ -1,5 +1,9 @@
 vi:
   pages:
+    logout: "Đăng xuất"
+    settings: "Cài đặt"
+    profile: "Hồ sơ"
+    account: "Tài khoản"
     title: "Electronic"
     home: "Trang chủ"
     cart: "Giỏ hàng"
@@ -17,3 +21,13 @@ vi:
     total_of_money: "Tổng tiền:"
     vi: "VI"
     en: "EN"
+  sessions:
+    log_in: "Đăng nhập"
+    email: "Email"
+    password: "Mật khẩu"
+    new_user: "Bạn chưa có tài khoản!"
+    sign_up_now: "Đăng ký ngay"
+    invalid_email_password: "Email hoặc mật khẩu không hợp lệ!"
+    login_please: "Bạn cần phải đăng nhập!"
+    admin_please: "Bạn không phải là quản trị viên"
+    error_not_find: "không tìm thấy người dùng"
