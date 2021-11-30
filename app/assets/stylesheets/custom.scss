@@ -42,3 +42,17 @@
 .login_btn {
   margin-top: 20px;
 }
+
+.checkbox_rm {
+  margin-bottom: 1px;
+  margin-top: 10px;
+  display: block;
+  span {
+    font-weight: normal;
+    margin-left: 1px;
+  }
+}
+#session_remember_me {
+  margin-left: 0;
+  width: auto;
+}

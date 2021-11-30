@@ -4,8 +4,9 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
-    if @user&.authenticate params[:session][:password]
+    if @user&.authenticate(params[:session][:password])
       log_in @user
+      is_remember_me? ? remember(@user) : not_remember(@user)
       return redirect_to admin_root_url if @user.admin?
 
       redirect_to root_url
@@ -21,6 +22,10 @@ class SessionsController < ApplicationController
   end
 
   private
+
+  def is_remember_me?
+    params[:session][:remember_me] == "1"
+  end
 
   def fetch_user_by_email
     @user = User.find_by email: params.dig(:session, :email).downcase

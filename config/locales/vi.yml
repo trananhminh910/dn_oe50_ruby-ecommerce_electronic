@@ -31,3 +31,4 @@ vi:
     login_please: "Bạn cần phải đăng nhập!"
     admin_please: "Bạn không phải là quản trị viên"
     error_not_find: "không tìm thấy người dùng"
+    remember_me: "Lưu đăng nhập"
