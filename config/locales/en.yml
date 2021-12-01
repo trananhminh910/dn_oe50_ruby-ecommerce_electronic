@@ -31,3 +31,4 @@ en:
     login_please: "Let login with your account, please!"
     admin_please: "You isn't Admin role"
     error_not_find: "user not find"
+    remember_me: "Remember me in this computer"

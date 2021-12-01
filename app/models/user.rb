@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  attr_accessor :remember_token
   has_many :addresses, dependent: :destroy
   has_many :rates, dependent: :destroy
   has_many :orders, dependent: :destroy
@@ -23,14 +24,33 @@ class User < ApplicationRecord
             length: {minimum: Settings.length.min_length_password},
             allow_nil: true
 
-  def self.digest string
-    cost = if ActiveModel::SecurePassword.min_cost
-             BCrypt::Engine::MIN_COST
-           else
-             BCrypt::Engine.cost
-           end
-    BCrypt::Password.create string, cost: cost
+  has_secure_password
+
+  class << self
+    def new_token
+      SecureRandom.urlsafe_base64
+    end
+
+    def digest string
+      cost = if ActiveModel::SecurePassword.min_cost
+               BCrypt::Engine::MIN_COST
+             else
+               BCrypt::Engine.cost
+             end
+      BCrypt::Password.create string, cost: cost
+    end
   end
 
-  has_secure_password
+  def remember
+    self.remember_token = User.new_token
+    update_column :remember_digest, User.digest(remember_token)
+  end
+
+  def authenticated? remember_token
+    BCrypt::Password.new(remember_digest).is_password? remember_token
+  end
+
+  def not_remember
+    update_column :remember_digest, nil
+  end
 end

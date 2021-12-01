@@ -6,9 +6,13 @@
     <div class="col-md-6 col-md-offset-3">
       <%= form_for :session, url: login_path do |f| %>
         <%= f.label t "sessions.email" %>
-        <%= f.email_field :email, class: "form-control" %>
+        <%= f.email_field :email, class: "form-control", required: true %>
         <%= f.label t "sessions.password" %>
         <%= f.password_field :password, class: "form-control" %>
+        <%= f.label :remember_me, class: "checkbox_rm" do %>
+          <%= f.check_box :remember_me %>
+          <span><%= t "sessions.remember_me" %></span>
+        <% end %>
         <%= f.submit yield(:button_text), class: "btn btn-primary login_btn" %>
       <% end %>
       <p><%= t "sessions.new_user" %> <%= link_to t("sessions.sign_up_now"), "#" %></p>
