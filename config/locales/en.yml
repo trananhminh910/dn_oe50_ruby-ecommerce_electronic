@@ -62,6 +62,7 @@ en:
     total_of_money: "Total"
     status: "Status"
     action: "Action"
+    filter_by: "Filter by"
   products:
     admin_title: "Products Management"
     find_placeholder: "What are you looking for?"
