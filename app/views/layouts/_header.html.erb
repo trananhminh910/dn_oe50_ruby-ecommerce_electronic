@@ -5,8 +5,8 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to t("pages.home"), root_path %></li>
         <li><%= link_to t("pages.cart"), cart_path %></li>
-        <li><%= link_to t("pages.vi"), locale:"vi" %></li>
-        <li><%= link_to t("pages.en"), locale:"en" %></li>
+        <li><%= link_to t("pages.vi"), locale: :vi %></li>
+        <li><%= link_to t("pages.en"), locale: :en %></li>
         <% if logged_in? %>
           <li class="dropdown">
             <%= link_to "#", class: "dropdown-toggle", "data-toggle": "dropdown" do %>

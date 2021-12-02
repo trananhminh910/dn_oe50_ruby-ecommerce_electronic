@@ -1,0 +1,9 @@
+<header role="banner">
+  <h1 class="warn"><%= t "pages.title" %></h1>
+  <ul class="utilities">
+    <li><%= link_to t("pages.vi"), locale: :vi %></li>
+    <li><%= link_to t("pages.en"), locale: :en %></li>
+    <li class="users"><%= link_to t("pages.profile"), "#" %></li>
+    <li class="logout warn"> <%= link_to t("pages.logout"), logout_path, method: :delete %></li>
+  </ul>
+</header>

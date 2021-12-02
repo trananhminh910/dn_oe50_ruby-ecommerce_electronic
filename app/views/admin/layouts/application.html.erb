@@ -11,15 +11,14 @@
 </head>
 
 <body>
-  <%= render "layouts/header" %>
-  <div class="container">
+  <%= render "admin/layouts/header_admin" %>
+  <%= render "admin/layouts/nav_admin" %>
+  <main role="main">
     <% flash.each do |message_type, message| %>
       <div class="text-center alert alert-<%= message_type %>"><%= message %></div>
     <% end %>
     <%= yield %>
-  </div>
-  <div class="fter">
-    <%= render "layouts/footer" %>
-  </div>
+  </main>
+  <%= render "admin/layouts/footer_admin" %>
 </body>
 </html>
