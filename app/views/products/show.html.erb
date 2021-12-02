@@ -1,0 +1,51 @@
+<% provide(:title, t("pages.detail")) %>
+<div class="container detail_page">
+  <div class="card">
+    <div class="container-fliud">
+      <div class="wrapper row">
+        <div class="preview col-md-6">
+          <div class="preview-pic tab-content">
+            <div class="tab-pane active" id="pic-1"><img src="/assets/computer.jpg" alt="">
+            </div>
+          </div>
+          <ul class="preview-thumbnail nav nav-tabs">
+            <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="/assets/computer.jpg" alt=""></a>
+            </li>
+            <li><a data-target="#pic-2" data-toggle="tab"><img src="/assets/computer.jpg" alt=""></a>
+            </li>
+            <li><a data-target="#pic-3" data-toggle="tab"><img src="/assets/computer.jpg" alt=""></a>
+            </li>
+            <li><a data-target="#pic-4" data-toggle="tab"><img src="/assets/computer.jpg" alt=""></a>
+            </li>
+            <li><a data-target="#pic-5" data-toggle="tab"><img src="/assets/computer.jpg" alt=""></a>
+            </li>
+          </ul>
+        </div>
+        <div class="details col-md-6">
+          <h3 class="product-title"><%= @product.name %></h3>
+          <h4 class="price"><%= t "pages.details.price_product", price: (number_to_currency_format @product.price) %></h4>
+          <div class="rating">
+            <div class="stars">
+              <%= 5.times do %>
+                <span class="fa fa-star checked"></span>
+              <% end %>
+            </div>
+            <span class="review-no"><%= t "pages.details.total_rate", rate_count: @rates.count %></span>
+          </div>
+          <p><%= t "pages.details.residual", residual: @product.residual %></p>
+          <div class="about_product">
+            <p class="product-description"><%= @product.description %></p>
+          </div>
+          <div class="action">
+            <a href="#">
+              <button class="add-to-cart btn btn-default" type="button"><%= t "pages.details.buy_now" %></button>
+            </a>
+            <a href="#">
+              <button class="add-to-cart btn btn-default" type="button"><%= t "pages.details.add_to_cart" %></button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

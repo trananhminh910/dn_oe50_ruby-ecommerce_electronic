@@ -19,6 +19,17 @@ vi:
     quantity: "Số lượng"
     actual_price: "Thành tiền"
     total_of_money: "Tổng tiền:"
+    empty_product: "Hiện tại không có sản phẩm nào"
+    details:
+      total_rate: "%{rate_count} đánh giá"
+      price_product: "Giá bán: %{price}"
+      buy_now: "Mua ngay"
+      add_to_cart: "Thêm vào giỏ hàng"
+      residual: "%{residual} sản phẩm có sẵn"
+  format:
+    vnd: "VND"
+  flash:
+    not_found_product: "Không tìm thấy thông tin cho sản phẩm này"
     vi: "VI"
     en: "EN"
   sessions:
