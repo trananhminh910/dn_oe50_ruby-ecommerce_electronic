@@ -1,0 +1,8 @@
+<%= f.label :name , "category name"%>
+<%= f.text_field :name, class: "category-name" %>
+<%= f.label :parent_id , "parent_id"%>
+<%= f.collection_select :parent_id, Category.all, :id, :name, {},{:class=>"form-control" }%>
+<div>
+  <p class="remove-fields mx-3 text-primary" style="cursor: pointer;"><%= t "products.use_existed_category" %>use existed categories</p>
+</div>
+<br>

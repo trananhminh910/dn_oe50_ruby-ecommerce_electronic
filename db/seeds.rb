@@ -58,7 +58,6 @@ end
 30.times do |n|
   name = Faker::Commerce.product_name
   price = 200000
-  image = "1.png"
   discount = 20
   residual = 100
   description = Faker::Lorem.sentence(word_count: 3, supplemental: true, random_words_to_add: 4)
@@ -66,7 +65,6 @@ end
   Product.create!(
     name: name,
     price: price,
-    image: image,
     discount: discount,
     residual: residual,
     description: description,
@@ -100,7 +98,7 @@ end
     shipping_fee: shipping_fee,
     total_of_money: total_of_money,
     user_id: user_id,
-    address_id: address_id
+    address_id: address_id,
   )
 end
 
