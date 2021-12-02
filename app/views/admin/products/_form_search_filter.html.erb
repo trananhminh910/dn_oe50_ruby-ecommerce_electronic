@@ -1,0 +1,6 @@
+<%= form_tag(admin_products_path, :method => "get", id: "search-form", class:"form-inline form-group") do %>
+  <%= text_field_tag :search, params[:search], placeholder: t("orders.find_placeholder"), class: "form-control mr-sm-2" %>
+  <%= submit_tag t("admin.search"), class: "btn bg-primary my-2 my-sm-0" %>
+  <span class="status-title"><%= t "orders.filter_by" %></span>
+  <%= select_tag :option, options_for_select(Settings.admin.product_sorts, params[:option]), class: "form-control mr-sm-2" %>
+<% end %>

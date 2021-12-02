@@ -1,43 +1,20 @@
+<% provide :title, t("products.admin_title") %>
 <section class="panel important">
-  <h2><%= t "products.admin_title" %></h2>
+  <h2><%= t "admin.products" %></h2>
 </section>
-<div class="find_wrap">
- <div class="search">
-  <input type="text" class="searchTerm" placeholder="What are you looking for?">
-  <button type="submit" class="searchButton">
-    <i class="fa fa-search"></i>
-  </button>
-</div>
+<div class="container">
+  <%= render "form_search_filter" %>
 </div>
 <div class="table-responsive">
   <table class="table">
     <thead>
-      <tr>
-        <th><%= t "products.id" %></th>
-        <th><%= t "products.name" %></th>
-        <th><%= t "products.price" %></th>
-        <th><%= t "products.image" %></th>
-        <th><%= t "products.discount" %></th>
-        <th><%= t "products.residual" %></th>
-        <th><%= t "products.description" %></th>
-        <th><%= t "products.action" %></th>
-      </tr>
+      <%= render "thead_product" %>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>Iphone 7</td>
-        <td>200000</td>
-        <td>iphone7.png</td>
-        <td>0</td>
-        <td>100</td>
-        <td>Made in china</td>
-        <td>
-          <i class="fa fa-2x fa-eye text-primary" aria-hidden="true"></i>
-          <i class="fa fa-2x fa-pencil-square-o text-success" aria-hidden="true"></i>
-          <i class="fa fa-2x fa-window-close text-danger" aria-hidden="true"></i>
-        </td>
-      </tr>
+      <%= render "product" %>
     </tbody>
   </table>
+</div>
+<div>
+  <%= paginate @products %>
 </div>
