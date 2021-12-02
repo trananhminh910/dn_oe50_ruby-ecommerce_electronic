@@ -8,9 +8,15 @@
     <td><%= product.description %></td>
     <td><%= image_tag product.display_image if product.image.attached? %></td>
     <td>
-      <i class="fa fa-2x fa-eye text-primary" aria-hidden="true"></i>
-      <i class="fa fa-2x fa-pencil-square-o text-success" aria-hidden="true"></i>
-      <i class="fa fa-2x fa-window-close text-danger" aria-hidden="true"></i>
-    </td>
+      <%= link_to admin_product_path(product) do %>
+        <i class="fa fa-2x fa-eye text-primary" aria-hidden="true"></i>
+      <% end %>
+      <%= link_to edit_admin_product_path(product) do %>
+        <i class="fa fa-2x fa-pencil-square-o text-success" aria-hidden="true"></i>
+      <% end %>
+      <%= link_to admin_product_path(product), method: :delete, data: {confirm: t("admin.confirm_delete")} do %>
+        <i class="fa fa-2x fa-window-close text-danger" aria-hidden="true"></i>
+        <% end %>
+      </td>
   </tr>
 <% end %>
