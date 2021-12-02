@@ -1,7 +1,7 @@
 <tr>
   <td><%= order.id %></td>
-  <td><%= fetch_username_by_id order.user_id %></td>
-  <td><%= fetch_address_by_id order.address_id %></td>
+  <td><%= fetch_username_by_id order %></td>
+  <td><%= fetch_address_by_id order %></td>
   <td><%= number_to_currency_format order.shipping_fee %></td>
   <td><%= number_to_currency_format order.total_of_money %></td>
   <td class="order_status text-<%= change_color_order_status order %>"><%= order.status %></td>

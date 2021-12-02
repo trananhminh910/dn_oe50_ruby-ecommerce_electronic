@@ -11,11 +11,17 @@ module Admin::OrdersHelper
     end
   end
 
-  def fetch_username_by_id user_id
-    User.find(user_id).name
+  def fetch_username_by_id order
+    order.user.name
   end
 
-  def fetch_address_by_id address_id
-    Address.find(address_id).address
+  def fetch_address_by_id order
+    order.address.name
+  end
+
+  def render_select_tag
+    select_tag :status, options_for_select(Order.statuses,
+                                           Order.statuses[@order.status]),
+               class: "select-change-order form-control"
   end
 end
