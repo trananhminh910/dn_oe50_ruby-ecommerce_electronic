@@ -18,4 +18,10 @@ module Admin::OrdersHelper
   def fetch_address_by_id address_id
     Address.find(address_id).address
   end
+
+  def render_select_tag
+    select_tag :status, options_for_select(Order.statuses,
+                                           Order.statuses[@order.status]),
+               class: "select-change-order form-control"
+  end
 end
