@@ -77,7 +77,7 @@ end
     shipping_fee: shipping_fee,
     total_of_money: total_of_money,
     user_id: user_id,
-    address_id: address_id
+    address_id: address_id,
   )
 end
 
