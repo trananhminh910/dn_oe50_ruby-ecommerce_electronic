@@ -1,41 +1,20 @@
+<% provide(:title, t("orders.admin_title")) %>
 <section class="panel important">
   <h2><%= t "admin.orders" %></h2>
 </section>
 <div class="container">
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn bg-primary my-2 my-sm-0" type="submit"><%= t "admin.search" %></button>
-  </form>
+  <%= render "form_search_filter" %>
 </div>
 <div class="table-responsive">
   <table class="table">
     <thead>
-      <tr>
-        <th><%= t "orders.id" %></th>
-        <th><%= t "orders.username" %></th>
-        <th><%= t "orders.address" %></th>
-        <th><%= t "orders.shipping_fee" %></th>
-        <th><%= t "orders.quantity" %></th>
-        <th><%= t "orders.total_of_money" %></th>
-        <th><%= t "orders.status" %></th>
-        <th><%= t "orders.action" %></th>
-      </tr>
+      <%= render "thead_order" %>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>Tran Anh Minh</td>
-        <td>Da Nang</td>
-        <td><%= number_to_currency_format 200000.0 %></td>
-        <td>2</td>
-        <td><%= number_to_currency_format 800000.0 %></td>
-        <td>pending</td>
-        <td>
-          <a href="#"><i class="fa fa-2x fa-eye text-primary" aria-hidden="true"></i></a>
-          <i class="fa fa-2x fa-pencil-square-o text-success" aria-hidden="true"></i>
-          <i class="fa fa-2x fa-window-close text-danger" aria-hidden="true"></i>
-        </td>
-      </tr>
+      <%= render @orders %>
     </tbody>
   </table>
+</div>
+<div>
+  <%= paginate @orders %>
 </div>
