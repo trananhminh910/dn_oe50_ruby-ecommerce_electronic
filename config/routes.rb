@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
     root "static_page#home"
-    get "/cart", to: "static_page#cart"
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
@@ -11,5 +10,12 @@ Rails.application.routes.draw do
       resources :orders, only: [:index]
       resources :products, only: [:index]
     end
+
+    resources :carts, only: [:index] do
+      collection do
+        get "/add_to_cart/:id", to: "carts#add_to_cart", as: "add_to"
+      end
+    end
+
   end
 end
