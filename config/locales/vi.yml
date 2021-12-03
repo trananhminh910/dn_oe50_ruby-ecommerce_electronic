@@ -56,7 +56,7 @@ vi:
     search: "tìm kiếm"
   orders:
     admin_title: "Invoices Management"
-    find_placeholder: "What are you looking for?"
+    find_placeholder: "Nhập tìm kiếm?"
     id: "Mã HĐ"
     username: "Tên người mua"
     address: "Địa chỉ"
@@ -65,6 +65,7 @@ vi:
     total_of_money: "Tổng tiền"
     status: "Trạng thái"
     action: "Hành động"
+    filter_by: "Lọc theo"
   products:
     admin_title: "Quản lý sản phẩm"
     find_placeholder: "nhập tên sản phẩm?"
