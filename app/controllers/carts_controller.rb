@@ -3,8 +3,11 @@ class CartsController < ApplicationController
                 :get_line_item,
                 :check_residual_quantity?,
                 only: [:add_to_cart]
+  before_action :logged_in_user, only: [:index, :add_to_cart]
 
-  def index; end
+  def index
+    @cart_items = get_line_items_in_cart
+  end
 
   def add_to_cart
     if @item
