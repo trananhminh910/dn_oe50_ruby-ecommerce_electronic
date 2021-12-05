@@ -15,10 +15,11 @@
   <%= render "admin/layouts/nav_admin" %>
   <main role="main">
     <% flash.each do |message_type, message| %>
-      <div class="text-center alert alert-<%= message_type %>"><%= message %></div>
+      <div class="flash-alert text-center alert alert-<%= message_type %>"><%= message %></div>
     <% end %>
     <%= yield %>
   </main>
   <%= render "admin/layouts/footer_admin" %>
+  <%= javascript_pack_tag "custom", "data-turbolinks-track": "reload" %>
 </body>
 </html>

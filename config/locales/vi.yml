@@ -93,3 +93,16 @@ vi:
     residual: "Còn lại"
     description: "Thông tin"
     action: "Hành động"
+    image_format_message: "ảnh phải đúng định dạng"
+    image_format_size: "kích thước ảnh phải nhỏ hơn 5MB"
+    add_success: "Thêm mới sản phẩm thành công!"
+    add_failed: "Thêm mới sản phẩm thất bại!"
+    add_new_title: "Thêm mới sản phẩm"
+    add_new_category: "Thêm mới danh mục"
+    add_new: "Thêm mới sản phẩm"
+    use_existed_category: "Sử dụng danh mục có đã có"
+  the_form_contains: "Biểu mẫu chứa"
+  error: {
+    one: "1 Lỗi",
+    other: "%{count} Lỗi"
+  }

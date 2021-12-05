@@ -1,4 +1,9 @@
 currency_regex: !ruby/regexp /\A[+-]?(\d+\.\d+)?\Z/
+product:
+  max_length_name: 100
+  min_discount: 0
+  max_discount: 100
+  max_residual: 5000
 length:
   max_length_email: 150
   min_length_username: 6
@@ -20,3 +25,9 @@ admin:
     oldest: "0"
     newest: "1"
     price: "2"
+  product:
+    image:
+      format: ["image/png", "image/jpg", "image/jpeg"]
+      less_than: 5
+      width: 70
+      height: 70
