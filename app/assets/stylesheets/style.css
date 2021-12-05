@@ -375,3 +375,11 @@ img {
 .about_product {
   height: 420px;
 }
+
+.order_page {
+  height: 800px;
+}
+
+.btn-confirm {
+  margin-top: 20px;
+}

@@ -26,11 +26,19 @@ User.create!(
 end
 
 5.times do |n|
-  name = %w[laptop PC tablet mobile headphone].sample
+  name = %w[Dell MSI Asus Acer Macbook HP].sample
   parent_id = 1
   Category.create!(
     name: name,
     parent_id: parent_id
+  )
+end
+
+5.times do |n|
+  name = %w[Laptop Desktop Network-equipment Gaming-chair Computer-components].sample
+  Category.create!(
+    name: name,
+    parent_id: nil
   )
 end
 

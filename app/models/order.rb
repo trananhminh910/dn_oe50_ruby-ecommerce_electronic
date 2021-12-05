@@ -2,6 +2,7 @@ class Order < ApplicationRecord
   belongs_to :user
   belongs_to :address
   has_many :order_details, dependent: :destroy
+  has_many :products, through: :order_details
   enum status: {pending: 0, accept: 1, cancel: 2, reject_: 3}
   enum sort: {oldest: 0, newest: 1, status: 2, default: 3}
 
