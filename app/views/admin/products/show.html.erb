@@ -1,0 +1,50 @@
+<% provide(:title, t("orders.details_title")) %>
+<div class="container">
+  <h2><%= t "orders.details_title" %></h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th><%= t "orders.details_name" %></th>
+        <th><%= t "orders.details_desc" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th><%= t "products.id" %></th>
+        <td><%= @product.id %></td>
+      </tr>
+      <tr>
+        <th><%= t "products.name" %></th>
+        <td><%= @product.name %></td>
+      </tr>
+      <tr>
+        <th><%= t "products.price" %></th>
+        <td><%= number_to_currency_format @product.price %></td>
+      </tr>
+      <tr>
+        <th><%= t "products.discount" %></th>
+        <td><%=  @product.discount %></td>
+      </tr>
+      <tr>
+        <th><%= t "products.residual" %></th>
+        <td><%= @product.residual %></td>
+      </tr>
+      <tr>
+        <th><%= t "products.category" %></th>
+        <td><%= @product.category.name %></td>
+      </tr>
+
+      <tr>
+        <th><%= t "products.description" %></th>
+        <td><%= @product.description %></td>
+      </tr>
+      <tr>
+        <th><%= t "products.image" %></th>
+        <td><%= image_tag @product.display_image_200 if @product.image.attached? %></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="container">
+    <%= link_to "back", admin_products_path, class: "btn btn-success" %>
+  </div>
+</div>

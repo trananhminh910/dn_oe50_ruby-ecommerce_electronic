@@ -54,6 +54,7 @@ vi:
     categories: "Quản lý danh mục"
     users: "Quản lý người dùng"
     search: "tìm kiếm"
+    confirm_delete: "Có phải bạn muốn xóa?"
   orders:
     admin_title: "Invoices Management"
     find_placeholder: "Nhập tìm kiếm?"
@@ -101,6 +102,7 @@ vi:
     add_new_category: "Thêm mới danh mục"
     add_new: "Thêm mới sản phẩm"
     use_existed_category: "Sử dụng danh mục có đã có"
+    category: "Danh mục"
   the_form_contains: "Biểu mẫu chứa"
   error: {
     one: "1 Lỗi",

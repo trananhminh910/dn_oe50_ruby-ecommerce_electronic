@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     namespace :admin do
       root "static_pages#index"
       resources :orders, only: [:index, :edit, :update]
-      resources :products, only: [:index, :new, :create]
+      resources :products
     end
 
     resources :carts, only: [:index] do

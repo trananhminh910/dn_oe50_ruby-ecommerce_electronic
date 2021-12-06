@@ -31,3 +31,5 @@ admin:
       less_than: 5
       width: 70
       height: 70
+      width_200: 200
+      height_200: 200
