@@ -115,3 +115,6 @@ en:
     view_details: "View details"
     user_order: "User order"
     cancel_order: "Cancel this order"
+    confirm_cancel: "Do you want cancel this order"
+    cancel_succes: "Cancel this order success"
+    cancel_failed: "Cancel this order failed"

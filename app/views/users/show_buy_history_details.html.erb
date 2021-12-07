@@ -31,7 +31,7 @@
       </p>
       <% if @order.pending? %>
         <div class="container">
-          <%= link_to t("users.cancel_order"), "#", class: "btn btn-danger" %>
+          <%= link_to t("users.cancel_order"), cancel_order_path(@order), class: "btn btn-danger", data: {confirm: t("users.confirm_cancel")} %>
         </div>
       <% end %>
     </div>

@@ -115,3 +115,6 @@ vi:
     view_details: "Xem chi tiết"
     user_order: "Người đặt hàng"
     cancel_order: "Hủy đơn hàng"
+    confirm_cancel: "Có phải bạn muốn hủy bỏ đơn hàng"
+    cancel_succes: "Hủy đơn hàng thành công"
+    cancel_failed: "Hủy đơn hàng thất bại"
