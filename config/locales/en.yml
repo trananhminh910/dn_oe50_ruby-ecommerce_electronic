@@ -33,6 +33,10 @@ en:
     cart_success: "The product has been added to cart"
     cart_update: "The product has been updated to the quantity in the cart"
     not_enough: "Current product is not enough"
+    remove_cart_success: "The product has been removed from the cart"
+    remove_cart_fail: "Delete failed"
+    update_cart_success: "Update successful"
+    update_cart_fail: "Update failed"
     vi: "VI"
     en: "EN"
   sessions:

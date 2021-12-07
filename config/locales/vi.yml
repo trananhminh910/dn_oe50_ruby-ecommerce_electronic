@@ -33,6 +33,10 @@ vi:
     cart_success: "Sản phẩm đã được thêm vào giỏ hàng"
     cart_update: "Sản phẩm đã được cập nhật số lượng trong giỏ hàng"
     not_enough: "Sản phẩm hiện tại không đủ"
+    remove_cart_success: "Sản phẩm đã được xóa khỏi giỏ hàng"
+    remove_cart_fail: "Xóa không thành công"
+    update_cart_success: "Cập nhật thành công"
+    update_cart_fail: "Cập nhật thất bại"
     vi: "VI"
     en: "EN"
   sessions:

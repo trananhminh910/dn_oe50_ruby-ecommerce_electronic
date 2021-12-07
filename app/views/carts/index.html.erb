@@ -26,26 +26,42 @@
               </div>
             </td>
             <td class="product_price"><%= number_to_currency_format item[:product].price %></td>
-            <td class="quantity">
-              <input class="form-control text-center", min="1" value="<%= item[:quantity] %>" type="number">
-            </td>
+            <%= form_with(url: update_carts_path(item[:product]), local: false, method: :put) do |f| %>
+              <td class="quantity">
+                <%= f.number_field :quantity, value: item[:quantity], min: 1, class: "form-control text-center change-quatity"%>
+                <%= f.hidden_field :id, value: item.dig(:product)&.id, class: "cart_product_id" %>
+              </td>
+            <% end %>
             <td data-th="subtotal" class="text-center"><%= number_to_currency_format line_total_price(item) %></td>
             <td class="actions">
-              <a href="#" class="btn btn-warning btn-block"><%= t "pages.remove" %></a>
+              <%= link_to remove_from_carts_path(item[:product]), class: "btn btn-warning btn-block" do %>
+                <%= t "pages.remove" %>
+              <% end %>
             </td>
           </tr>
         <% end %>
       </tbody>
       <tfoot>
         <tr>
-          <td><a href="#" class="btn btn-info"><i class="fa fa-angle-left"></i> <%= t "pages.continue_buy" %></a>
+          <td>
+            <a href="#" class="btn btn-info">
+              <i class="fa fa-angle-left"></i> <%= t "pages.continue_buy" %>
+            </a>
           </td>
           <td colspan="2" class="hidden-xs"> </td>
-          <td class="hidden-xs text-center"><strong><%= t "pages.total_of_money" %><%= number_to_currency_format total_of_money %></strong></td>
-          <td><a href="#" class="btn btn-success btn-block"><%= t "pages.pay" %> <i class="fa fa-angle-right"></i></a>
+          <td class="hidden-xs text-center">
+            <strong>
+              <%= t "pages.total_of_money" %> <%= number_to_currency_format total_of_money %>
+            </strong>
+          </td>
+          <td>
+            <a href="#" class="btn btn-success btn-block">
+              <%= t "pages.pay" %> <i class="fa fa-angle-right"></i>
+            </a>
           </td>
         </tr>
       </tfoot>
     </table>
   </div>
 </div>
+<%= javascript_include_tag "ajax_cart" %>
