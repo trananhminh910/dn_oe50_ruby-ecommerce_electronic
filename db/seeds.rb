@@ -66,6 +66,21 @@ end
   )
 end
 
+5.times do |n|
+  status = rand(0..1)
+  shipping_fee = 20000
+  total_of_money = 222222
+  user_id = 1
+  address_id = rand(1..20)
+  Order.create!(
+    status: status,
+    shipping_fee: shipping_fee,
+    total_of_money: total_of_money,
+    user_id: user_id,
+    address_id: address_id
+  )
+end
+
 30.times do |n|
   status = rand(0..3)
   shipping_fee = 20000
@@ -82,7 +97,7 @@ end
 end
 
 30.times do |n|
-  quantity = %w[0 1 2 3]
+  quantity = rand(1..3)
   autual_price = 200000
   order_id = rand(1..20)
   product_id = rand(1..20)

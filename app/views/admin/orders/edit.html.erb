@@ -1,0 +1,33 @@
+<% provide :title, t("orders.details_title") %>
+<div class="container">
+  <h2><%= t "orders.details_title" %></h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th><%= t "orders.details_name" %></th>
+        <th><%= t "orders.details_desc" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th><%= t "orders.username" %></th>
+        <td><%= fetch_username_by_id @order %></td>
+      </tr>
+      <tr>
+        <th><%= t "orders.address" %></th>
+        <td><%= fetch_address_by_id @order %></td>
+      </tr>
+      <tr>
+        <th><%= t "orders.shipping_fee" %></th>
+        <td><%= number_to_currency_format @order.shipping_fee %></td>
+      </tr>
+      <tr>
+        <th><%= t "orders.total_of_money" %></th>
+        <td><%= number_to_currency_format @order.total_of_money %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="container bg-info change-status-order-container">
+  <%= render "form_change_status" %>
+</div>

@@ -1,0 +1,10 @@
+<%= form_for(@order, url: admin_order_path, id: "search-form", class:"form-inline form-change-status") do |f| %>
+  <span class="status-change-title"><%= t "orders.status" %></span>
+  <%= render_select_tag %>
+  <br>
+  <% if @order.cancel? %>
+    <div class="container bg-warning"><%= t "orders.user_canceled_order" %></div>
+  <% else %>
+    <%= f.submit t("orders.change"), class: "change-order-btn" %>
+  <% end %>
+<% end %>
