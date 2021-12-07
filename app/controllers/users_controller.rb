@@ -14,11 +14,10 @@ class UsersController < ApplicationController
     ActiveRecord::Base.transaction do
       if @order.update(status: Settings.admin.order_status.cancel)
         flash[:succes] = t "users.cancel_succes"
-        redirect_to buy_history_details_path @order
       else
         flash[:danger] = t "users.cancel_failed"
-        redirect_to buy_history_details_path @order
       end
+      redirect_to buy_history_details_path @order
     end
   end
 

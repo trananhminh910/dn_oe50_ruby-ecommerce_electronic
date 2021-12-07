@@ -1,0 +1,8 @@
+<div class="stars">
+  <%= 5.times do |n| %>
+    <%= link_to rating_path @product,n+1, remote: true do %>
+    <span class="fa fa-2x fa-star <%= rated n, @existed_rate %>"></span>
+    <% end %>
+  <% end %>
+</div>
+<span class="review-no"><%= t "pages.details.total_rate", rate_count: @rates.count %></span>

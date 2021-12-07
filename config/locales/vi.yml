@@ -118,3 +118,6 @@ vi:
     confirm_cancel: "Có phải bạn muốn hủy bỏ đơn hàng"
     cancel_succes: "Hủy đơn hàng thành công"
     cancel_failed: "Hủy đơn hàng thất bại"
+  rating:
+    rating_success: "Đánh giá thành công!"
+    rating_failed: "Bạn cần đăng nhập tài khoản!"

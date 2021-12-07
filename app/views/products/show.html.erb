@@ -25,12 +25,7 @@
           <h3 class="product-title"><%= @product.name %></h3>
           <h4 class="price"><%= t "pages.details.price_product", price: (number_to_currency_format @product.price) %></h4>
           <div class="rating">
-            <div class="stars">
-              <%= 5.times do %>
-                <span class="fa fa-star checked"></span>
-              <% end %>
-            </div>
-            <span class="review-no"><%= t "pages.details.total_rate", rate_count: @rates.count %></span>
+            <%= render "rating" %>
           </div>
           <p><%= t "pages.details.residual", residual: @product.residual %></p>
           <div class="about_product">
