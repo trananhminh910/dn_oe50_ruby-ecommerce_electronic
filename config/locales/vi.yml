@@ -1,5 +1,6 @@
 vi:
   pages:
+    show_buy_history: "Lịch sử mua hàng"
     logout: "Đăng xuất"
     settings: "Cài đặt"
     profile: "Hồ sơ"
@@ -83,6 +84,7 @@ vi:
     mail_title: "Electronic Ecommerce"
     mail_greeting: "Xin chào "
     mail_content: "Quản trị viên đã thay đổi trạng thái đơn hàng của bạn thành "
+    create_at: "Ngày tạo"
   products:
     admin_title: "Quản lý sản phẩm"
     find_placeholder: "nhập tên sản phẩm?"
@@ -108,3 +110,8 @@ vi:
     one: "1 Lỗi",
     other: "%{count} Lỗi"
   }
+  users:
+    not_found_user: "Người dùng không tồn tại"
+    view_details: "Xem chi tiết"
+    user_order: "Người đặt hàng"
+    cancel_order: "Hủy đơn hàng"

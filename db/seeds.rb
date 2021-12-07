@@ -8,6 +8,18 @@ User.create!(
   password_confirmation: "111111",
   is_active: true
 )
+
+User.create!(
+  email: "trananhminh91098@gmail.com",
+  name: "Tran Anh Minh",
+  gender: true,
+  avatar: "1.png",
+  role: 0,
+  password: "111111",
+  password_confirmation: "111111",
+  is_active: true
+)
+
 30.times do |n|
   name = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
@@ -64,6 +76,21 @@ end
   )
 end
 
+5.times do |n|
+  status = rand(0..1)
+  shipping_fee = 25000
+  total_of_money = 2414151
+  user_id = 2
+  address_id = rand(1..20)
+  Order.create!(
+    status: status,
+    shipping_fee: shipping_fee,
+    total_of_money: total_of_money,
+    user_id: user_id,
+    address_id: address_id,
+  )
+end
+
 30.times do |n|
   status = rand(0..3)
   shipping_fee = 20000
@@ -79,8 +106,33 @@ end
   )
 end
 
+5.times do |n|
+  quantity = rand(1..3)
+  autual_price = 200000
+  order_id = 1
+  product_id = rand(1..20)
+  OrderDetail.create!(
+    quantity: quantity,
+    autual_price: autual_price,
+    order_id: order_id,
+    product_id: product_id
+  )
+end
+5.times do |n|
+  quantity = rand(1..3)
+  autual_price = 200000
+  order_id = n + 1
+  product_id = rand(1..20)
+  OrderDetail.create!(
+    quantity: quantity,
+    autual_price: autual_price,
+    order_id: order_id,
+    product_id: product_id
+  )
+end
+
 30.times do |n|
-  quantity = %w[0 1 2 3]
+  quantity = rand(1..3)
   autual_price = 200000
   order_id = rand(1..20)
   product_id = rand(1..20)

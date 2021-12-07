@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
+    get "/show_buy_history/:id", to: "users#show_buy_history", as: "buy_history"
+    get "/show_buy_history_details/:order_id", to: "users#show_buy_history_details", as: "buy_history_details"
     resources :products, only: [:show]
     namespace :admin do
       root "static_pages#index"
@@ -16,6 +18,5 @@ Rails.application.routes.draw do
         get "/add_to_cart/:id", to: "carts#add_to_cart", as: "add_to"
       end
     end
-
   end
 end

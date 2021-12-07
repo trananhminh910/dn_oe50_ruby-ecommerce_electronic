@@ -56,3 +56,22 @@
   margin-left: 0;
   width: auto;
 }
+
+.show-history-container {
+    background: #eee;
+    font-family: Assistant, sans-serif;
+    padding: 40px;
+    margin: 20px;
+}
+
+.cell-1 {
+    border-collapse: separate;
+    border-spacing: 0 4em;
+    background: #fff;
+    border-bottom: 5px solid transparent;
+    background-clip: padding-box;
+}
+
+.thead-history {
+    background: #dddcdc;
+}

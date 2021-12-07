@@ -1,0 +1,56 @@
+<div class="container-fliud jumbotron">
+  <div class="row">
+    <div class="col-xs-6 col-sm-4">
+      <p>
+        <small class="text-primary"><%= t "orders.id" %>: </small>
+        <%= @order.id %>
+      </p>
+      <p>
+        <small class="text-primary"><%= t "users.user_order" %>: </small>
+        <%= @order.user.name %>
+      </p>
+      <p>
+        <small class="text-primary"><%= t "orders.address" %>: </small>
+        <%= @order.address.address %>
+      </p>
+      <p>
+        <small class="text-primary"><%= t "orders.shipping_fee" %>: </small>
+        <%= number_to_currency_format @order.shipping_fee %>
+      </p>
+      <p>
+        <small class="text-primary"><%= t "orders.create_at" %>: </small>
+        <%= @order.created_at %>
+      </p>
+      <p>
+        <small class="text-primary"><%= t "orders.status" %>: </small>
+        <span class="label label-<%= change_color_order_status @order %>"><%= @order.status %></span>
+      </p>
+      <p>
+        <small class="text-primary"><%= t "orders.total_of_money" %>: </small>
+        <%= number_to_currency_format @order.total_of_money %>
+      </p>
+      <% if @order.pending? %>
+        <div class="container">
+          <%= link_to t("users.cancel_order"), "#", class: "btn btn-danger" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-xs-6 col-sm-8">
+      <div class="row">
+        <p class="col-sm-3"><%= t "products.name" %></p>
+        <p class="col-sm-3"><%= t "orders.quantity" %></p>
+        <p class="col-sm-3"><%= t "products.image" %></p>
+        <p class="col-sm-3"><%= t "products.price" %></p>
+      </div>
+      <% @order_details.each do |detail| %>
+        <div class="row">
+          <p class="col-sm-3"><%= detail.product.name %></p>
+          <p class="col-sm-3"><%= detail.quantity %></p>
+          <p class="col-sm-3"><%= image_tag detail.product.display_image if detail.product.image.attached? %></p>
+          <p class="col-sm-3"><%= number_to_currency_format detail.autual_price %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

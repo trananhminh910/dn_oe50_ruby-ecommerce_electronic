@@ -1,0 +1,46 @@
+<div class="container show-history-container col-md-12">
+  <div class="d-flex justify-content-center row">
+    <div class="col-md-12">
+      <div class="rounded">
+        <div class="table-responsive table-borderless">
+          <table class="table">
+            <thead class="thead-history">
+              <tr>
+                <th class="text-center">
+                  <div class="toggle-btn">
+                    <div class="inner-circle"></div>
+                  </div>
+                </th>
+                <th><%= t "orders.id" %></th>
+                <th><%= t "orders.shipping_fee" %></th>
+                <th><%= t "orders.status" %></th>
+                <th><%= t "orders.total_of_money" %></th>
+                <th><%= t "orders.address" %></th>
+                <th><%= t "orders.create_at" %></th>
+                <th></th>
+              </tr>
+            </thead>
+            <% @orders.each do |order| %>
+              <tbody class="table-body">
+                <tr class="cell-1">
+                  <td class="text-center">
+                    <div class="toggle-btn">
+                      <div class="inner-circle"></div>
+                    </div>
+                  </td>
+                  <td>#SO-<%= order.id %></td>
+                  <td><%= number_to_currency_format order.shipping_fee %></td>
+                  <td><span class="label label-<%= change_color_order_status order %>"><%= order.status %></span></td>
+                  <td><%= number_to_currency_format order.total_of_money %></td>
+                  <td><%= order.address.address %></td>
+                  <td><%= order.created_at %></td>
+                  <td><%= link_to t("users.view_details"), buy_history_details_path(order) %></td>
+                </tr>
+              </tbody>
+            <% end %>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

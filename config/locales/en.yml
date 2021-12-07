@@ -1,5 +1,6 @@
 en:
   pages:
+    show_buy_history: "Bought History"
     logout: "Logout"
     settings: "Settings"
     profile: "Profile"
@@ -83,11 +84,12 @@ en:
     mail_title: "Electronic Ecommerce"
     mail_greeting: "Hi "
     mail_content: "Admin changed your order status to "
+    create_at: "Create at"
   products:
     admin_title: "Products Management"
     find_placeholder: "What are you looking for?"
     id: "ProductID"
-    name: "Name"
+    name: "name"
     price: "Price"
     image: "Image"
     discount: "Discount"
@@ -108,3 +110,8 @@ en:
     one: "a Error",
     other: "%{count} Errors"
   }
+  users:
+    not_found_user: "User not found!"
+    view_details: "View details"
+    user_order: "User order"
+    cancel_order: "Cancel this order"
