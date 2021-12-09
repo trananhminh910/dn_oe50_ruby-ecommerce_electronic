@@ -1,8 +1,7 @@
 User.create!(
   email: "trananhminh910@gmail.com",
   name: "Tran Anh Minh",
-  gender: true,
-  avatar: "1.png",
+  gender: "0",
   role: 1,
   password: "111111",
   password_confirmation: "111111",
@@ -12,8 +11,7 @@ User.create!(
 User.create!(
   email: "trananhminh91098@gmail.com",
   name: "Tran Anh Minh",
-  gender: true,
-  avatar: "1.png",
+  gender: "0",
   role: 0,
   password: "111111",
   password_confirmation: "111111",
@@ -23,13 +21,12 @@ User.create!(
 30.times do |n|
   name = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
-  gender = true
+  gender = "0"
   password = "password"
   User.create!(
     name: name,
     email: email,
     gender: gender,
-    avatar: "1.png",
     role: 0,
     password: password,
     password_confirmation: password,

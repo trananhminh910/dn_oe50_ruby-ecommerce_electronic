@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :fetch_user, only: [:show_buy_history]
+  before_action :fetch_user, only: [:show_buy_history, :edit, :update]
   before_action :fetch_order, only: [:show_buy_history_details, :cancel_order]
 
   def show_buy_history
@@ -21,13 +21,25 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit; end
+
+  def update
+    if @user.update(user_params)
+      flash[:success] = t "users.updated_success"
+      redirect_to edit_user_url @user
+    else
+      flash[:danger] = t "users.updated_failed"
+      render :edit
+    end
+  end
+
   private
 
   def fetch_order
     @order = Order.find_by id: params[:order_id]
     return if @order.present?
 
-    flash[:danger] = "order not_found_user"
+    flash[:danger] = t "users.not_found_order"
     redirect_to root_url
   end
 
@@ -37,5 +49,12 @@ class UsersController < ApplicationController
 
     flash[:danger] = t "users.not_found_user"
     redirect_to root_url
+  end
+
+  def user_params
+    params.require(:user)
+          .permit(
+            :email, :name, :gender, :password, :password_confirmation
+          )
   end
 end

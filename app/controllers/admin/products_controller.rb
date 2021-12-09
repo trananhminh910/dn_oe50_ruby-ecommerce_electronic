@@ -47,9 +47,9 @@ class Admin::ProductsController < Admin::BaseController
 
   def destroy
     if @product&.destroy
-      flash[:success] = "delete_success"
+      flash[:success] = "Delete success"
     else
-      flash[:danger] = "delete_failed"
+      flash[:danger] = "Delete failed!"
     end
     redirect_to admin_products_url
   end

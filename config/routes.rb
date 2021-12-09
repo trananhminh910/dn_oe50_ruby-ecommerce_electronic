@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     get "/show_buy_history_details/:order_id", to: "users#show_buy_history_details", as: "buy_history_details"
     get "/cancel_order_user/:order_id", to: "users#cancel_order", as: "cancel_order"
     get "/rating/:id/:rate_num", to: "products#rating", as: "rating"
+    resources :users, only: [:edit, :update]
     resources :products, only: [:show]
     namespace :admin do
       root "static_pages#index"

@@ -107,8 +107,7 @@ ActiveRecord::Schema.define(version: 2021_12_05_075100) do
   create_table "users", charset: "utf8mb3", force: :cascade do |t|
     t.string "email"
     t.string "name"
-    t.boolean "gender"
-    t.string "avatar"
+    t.string "gender"
     t.integer "role", default: 2, null: false
     t.boolean "is_active"
     t.string "password_digest"

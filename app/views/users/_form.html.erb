@@ -1,0 +1,14 @@
+<%= form_for @user do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <%= f.label t "users.name" %>
+  <%= f.text_field :name, class: "form-control" %>
+  <%= f.label t "users.email" %>
+  <%= f.email_field :email, class: "form-control" %>
+  <%= f.label t "users.gender" %>
+  <%= f.select :gender, options_for_select(User.genders, User.genders[@user.gender]), class: "form-control mr-sm-2" %>
+  <%= f.label t "users.password" %>
+  <%= f.password_field :password, class: "form-control" %>
+  <%= f.label t "users.password_comfirm"%>
+  <%= f.password_field :password_confirmation, class: "form-control" %>
+  <%= f.submit "Save changes", class: "btn btn-primary" %>
+<% end %>
