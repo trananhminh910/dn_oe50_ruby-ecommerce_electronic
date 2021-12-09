@@ -1,0 +1,15 @@
+<% @products.each_with_index do |product, index| %>
+  <tr>
+    <td><%= create_index params[:page], index %></td>
+    <td><%= product.name %></td>
+    <td><%= number_to_currency_format product.price %></td>
+    <td><%= product.discount %></td>
+    <td><%= product.residual %></td>
+    <td><%= product.description %></td>
+    <td>
+      <i class="fa fa-2x fa-eye text-primary" aria-hidden="true"></i>
+      <i class="fa fa-2x fa-pencil-square-o text-success" aria-hidden="true"></i>
+      <i class="fa fa-2x fa-window-close text-danger" aria-hidden="true"></i>
+    </td>
+  </tr>
+<% end %>

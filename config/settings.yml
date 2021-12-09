@@ -16,3 +16,10 @@ admin:
     oldest: "0"
     newest: "1"
     status: "2"
+  product_option:
+    oldest: "1"
+    newest: "2"
+    price: "3"
+    price_desc: "4"
+    all: "5"
+  product_sorts: [["Oldest", 1], ["Newest", 2], ["Price", 3], ["Desc Price", 4], ["All", 5]]
