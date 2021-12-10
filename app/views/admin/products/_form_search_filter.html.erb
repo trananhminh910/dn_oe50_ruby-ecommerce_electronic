@@ -3,4 +3,5 @@
   <%= submit_tag t("admin.search"), class: "btn bg-primary my-2 my-sm-0" %>
   <span class="status-title"><%= t "orders.filter_by" %></span>
   <%= select_tag :option, options_for_select(Settings.admin.product_sorts, params[:option]), class: "form-control mr-sm-2" %>
+  <%= link_to t("products.add_new"),  new_admin_product_path, class: "btn btn-primary", style: "margin-left: 20px;" %>
 <% end %>

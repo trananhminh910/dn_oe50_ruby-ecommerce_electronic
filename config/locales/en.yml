@@ -105,3 +105,16 @@ en:
     residual: "Residual"
     description: "description"
     action: "Action"
+    image_format_message: "must be a valid image format"
+    image_format_size: "should be less than 5MB"
+    add_success: "Add new product success!"
+    add_failed: "Add new product failed!"
+    add_new_title: "Add new product"
+    add_new_category: "Add New Category"
+    add_new: "Add new product"
+    use_existed_category: "Use existed category"
+  the_form_contains: "This form contains"
+  error: {
+    one: "a Error",
+    other: "%{count} Errors"
+  }

@@ -6,6 +6,7 @@
     <td><%= product.discount %></td>
     <td><%= product.residual %></td>
     <td><%= product.description %></td>
+    <td><%= image_tag product.display_image if product.image.attached? %></td>
     <td>
       <i class="fa fa-2x fa-eye text-primary" aria-hidden="true"></i>
       <i class="fa fa-2x fa-pencil-square-o text-success" aria-hidden="true"></i>

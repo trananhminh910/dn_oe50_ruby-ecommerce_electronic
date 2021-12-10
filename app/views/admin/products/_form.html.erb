@@ -1,0 +1,50 @@
+<div class="col-md-6 col-md-offset-3">
+  <%= form_for @product, url: admin_products_path do |f|%>
+    <%= render "shared/error_messages", object: f.object %>
+    <div>
+      <%= f.label t "products.name" %>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+    <div>
+      <%= f.label t "products.price" %>
+      <%= f.text_field :price, class: "form-control" %>
+    </div>
+    <div>
+      <span class="image">
+        <%= f.label t "products.image" %>
+        <%= f.file_field :image, accept: "image/jpeg,image/gif,image/png" %>
+      </span>
+    </div>
+    <div>
+      <%= f.label t "products.discount" %>
+      <%= f.text_field :discount, class: "form-control" %>
+    </div>
+    <div>
+      <%= f.label t "products.residual" %>
+      <%= f.text_field :residual, class: "form-control" %>
+    </div>
+    <div>
+      <%= f.label t "products.description" %>
+      <%= f.text_field :description, class: "form-control" %>
+    </div>
+    <div class="lable-form category-existed">
+      <%= f.label :category_id, "category" %>
+      <%= f.collection_select :category_id, Category.all, :id, :name,
+      {},{:class=>"form-control"}%>
+    </div>
+    <div>
+      <h5 class="add-category-toggle alert alert-success" style="cursor: pointer"><%= t "products.add_new_category" %></h5>
+      <fieldset class="add-category-fs">
+        <%= f.fields_for :category do |category_form| %>
+          <%= render "category_fields", f: category_form %>
+        <% end %>
+        <div class="link-to-add-fields">
+          <%= link_to_add_fields t("products.add_new_category"), f, :category %>
+        </div>
+      </fieldset>
+    </div>
+    <div class="submit-form-index">
+      <%= f.submit t("products.add_new"), class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>

@@ -24,7 +24,6 @@ class Admin::OrdersController < Admin::BaseController
 
     update_status_pending @order
   end
-
   private
 
   def check_param_in_status
