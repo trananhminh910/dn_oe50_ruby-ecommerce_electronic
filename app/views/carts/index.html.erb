@@ -55,9 +55,9 @@
             </strong>
           </td>
           <td>
-            <a href="#" class="btn btn-success btn-block">
+            <%= link_to new_order_path, class: "btn btn-success btn-block" do %>
               <%= t "pages.pay" %> <i class="fa fa-angle-right"></i>
-            </a>
+            <% end %>
           </td>
         </tr>
       </tfoot>

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
     resources :products, only: [:show]
+    resources :orders, only: [:new, :create]
     namespace :admin do
       root "static_pages#index"
       resources :orders, only: [:index, :edit, :update]
