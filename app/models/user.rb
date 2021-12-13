@@ -4,6 +4,8 @@ class User < ApplicationRecord
   has_many :rates, dependent: :destroy
   has_many :orders, dependent: :destroy
   enum role: {user: 0, admin: 1}
+  enum gender: {female: false, male: true}
+  enum is_active: {unactive: false, active: true}
 
   validates :email,
             presence: true,
@@ -16,8 +18,7 @@ class User < ApplicationRecord
             length: {in: Settings.length.min_length_username..Settings.length.max_length_username}
 
   validates :gender,
-            presence: true,
-            inclusion: [true, false]
+            presence: true
 
   validates :password,
             presence: true,

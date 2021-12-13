@@ -139,6 +139,11 @@ GEM
       dry-schema (~> 1.8, >= 1.8.0)
     erubi (1.10.0)
     execjs (2.8.1)
+    factory_bot (6.2.0)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.2.0)
+      factory_bot (~> 6.2.0)
+      railties (>= 5.0.0)
     faker (2.1.2)
       i18n (>= 0.8)
     ffi (1.15.4)
@@ -297,6 +302,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
     semantic_range (3.0.0)
+    shoulda-matchers (5.0.0)
+      activesupport (>= 5.2.0)
     simplecov (0.21.2)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -355,6 +362,7 @@ DEPENDENCIES
   capybara (>= 3.26)
   config!
   database_cleaner
+  factory_bot_rails
   faker (= 2.1.2)
   figaro
   font-awesome-rails (~> 4.7, >= 4.7.0.5)
@@ -377,6 +385,7 @@ DEPENDENCIES
   rubocop-rails (~> 2.3.2)
   sass-rails (>= 6)
   selenium-webdriver
+  shoulda-matchers (~> 5.0)
   simplecov
   simplecov-rcov
   spring
