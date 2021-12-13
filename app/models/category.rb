@@ -5,4 +5,6 @@ class Category < ApplicationRecord
 
   scope :by_category, ->{where parent_id: nil}
   scope :by_brand, ->{where.not(parent_id: nil)}
+
+  validates :name, uniqueness: true
 end

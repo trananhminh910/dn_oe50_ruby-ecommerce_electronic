@@ -46,4 +46,8 @@ class Product < ApplicationRecord
   def display_image
     image.variant resize_to_limit: [Settings.admin.product.image.width, Settings.admin.product.image.height]
   end
+
+  def display_image_200
+    image.variant resize_to_limit: [Settings.admin.product.image.width_200, Settings.admin.product.image.height_200]
+  end
 end

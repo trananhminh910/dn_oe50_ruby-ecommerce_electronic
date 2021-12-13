@@ -3,7 +3,6 @@ class Admin::OrdersController < Admin::BaseController
   before_action :status_settings_params,
                 :check_param_in_status,
                 only: [:update]
-
   def index
     if search_params?
       search_with_sort params[:search], params[:option]
@@ -24,6 +23,7 @@ class Admin::OrdersController < Admin::BaseController
 
     update_status_pending @order
   end
+
   private
 
   def check_param_in_status
