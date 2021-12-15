@@ -1,6 +1,7 @@
 require "simplecov"
 require "simplecov-rcov"
 require "capybara/rspec"
+
 class SimpleCov::Formatter::MergedFormatter
   def format(result)
      SimpleCov::Formatter::HTMLFormatter.new.format(result)
