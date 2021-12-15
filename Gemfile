@@ -8,7 +8,6 @@ gem "bcrypt", "3.1.12"
 gem "bootsnap", ">= 1.4.4", require: false
 gem "bootstrap-sass", "3.4.1"
 gem "config", github: "railsconfig/config"
-gem "database_cleaner"
 gem "faker", "2.1.2"
 gem "figaro"
 gem "font-awesome-rails", "~> 4.7", ">= 4.7.0.5"
@@ -39,7 +38,10 @@ end
 
 group :test do
   gem "capybara", ">= 3.26"
+  gem "database_cleaner"
+  gem "factory_bot_rails"
   gem "selenium-webdriver"
+  gem "shoulda-matchers", "~> 5.0"
   gem "webdrivers"
 end
 
