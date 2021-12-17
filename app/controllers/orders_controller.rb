@@ -1,4 +1,7 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user!
+  authorize_resource
+
   def new
     @order = current_user.orders.build
     @cart_items = get_line_items_in_cart

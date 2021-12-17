@@ -1,5 +1,6 @@
 class Admin::ProductsController < Admin::BaseController
   before_action :fetch_product, only: [:show, :edit, :update, :update_product_category_condition?, :destroy]
+  authorize_resource
 
   def index
     @products = if search_params?

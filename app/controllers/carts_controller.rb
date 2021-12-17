@@ -3,7 +3,8 @@ class CartsController < ApplicationController
                 :get_line_item,
                 :check_residual_quantity?,
                 only: [:add_to_cart, :remove_from_cart, :update_cart]
-  before_action :logged_in_user, only: [:index, :add_to_cart]
+  before_action :authenticate_user!
+  authorize_resource class: false
 
   def index
     @cart_items = get_line_items_in_cart

@@ -7,6 +7,7 @@ gem "active_storage_validations", "0.8.2"
 gem "bcrypt", "3.1.12"
 gem "bootsnap", ">= 1.4.4", require: false
 gem "bootstrap-sass", "3.4.1"
+gem "cancancan"
 gem "config", github: "railsconfig/config"
 gem "devise"
 gem "faker", "2.1.2"
@@ -32,6 +33,7 @@ gem "webpacker", "~> 5.0"
 
 group :development do
   gem "listen", "~> 3.3"
+  gem "pry-rails"
   gem "rack-mini-profiler", "~> 2.0"
   gem "spring"
   gem "web-console", ">= 4.1.0"

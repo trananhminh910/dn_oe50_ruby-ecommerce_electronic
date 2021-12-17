@@ -1,7 +1,7 @@
 if($(".flash-alert").show()) {
    setTimeout(function(){
      $(".flash-alert").hide("3000")
-   }, 12500);
+   }, 4000);
 }
 
 $(".add-category-fs").hide();

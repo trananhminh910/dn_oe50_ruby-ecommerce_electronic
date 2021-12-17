@@ -141,3 +141,5 @@ en:
     cancel_account: "Cancel account"
     back: "Turn back"
     change_password: "Change password"
+  cancancan:
+    no_permission: "you don't permission this access"

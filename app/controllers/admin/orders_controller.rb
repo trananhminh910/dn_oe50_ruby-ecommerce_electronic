@@ -3,6 +3,8 @@ class Admin::OrdersController < Admin::BaseController
   before_action :status_settings_params,
                 :check_param_in_status,
                 only: [:update]
+  authorize_resource
+
   def index
     if search_params?
       search_with_sort params[:search], params[:option]
