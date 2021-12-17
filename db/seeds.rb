@@ -5,9 +5,19 @@ User.create!(
   avatar: "1.png",
   role: 1,
   password: "111111",
-  password_confirmation: "111111",
-  is_active: true
+  password_confirmation: "111111"
 )
+
+User.create!(
+  email: "trananhminh91098@gmail.com",
+  name: "Tran Anh Minh",
+  gender: true,
+  avatar: "1.png",
+  role: 0,
+  password: "111111",
+  password_confirmation: "111111"
+)
+
 30.times do |n|
   name = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
@@ -20,13 +30,12 @@ User.create!(
     avatar: "1.png",
     role: 0,
     password: password,
-    password_confirmation: password,
-    is_active: true,
+    password_confirmation: password
   )
 end
 
 5.times do |n|
-  name = %w[Dell MSI Asus Acer Macbook HP].sample
+  name = "Laptop #{n+1}"
   parent_id = 1
   Category.create!(
     name: name,
@@ -35,7 +44,7 @@ end
 end
 
 5.times do |n|
-  name = %w[Laptop Desktop Network-equipment Gaming-chair Computer-components].sample
+  name = "Computer #{n+1}"
   Category.create!(
     name: name,
     parent_id: nil

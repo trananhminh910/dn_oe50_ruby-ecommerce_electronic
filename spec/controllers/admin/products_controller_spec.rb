@@ -1,5 +1,4 @@
 require "rails_helper"
-include SessionsHelper
 require "support/shared_examples/index_examples"
 
 RSpec.describe Admin::ProductsController, type: :controller do
@@ -21,12 +20,12 @@ RSpec.describe Admin::ProductsController, type: :controller do
 
     it "should invalid login" do
       get :index
-      expect(response).to redirect_to login_path
+      expect(response).to redirect_to signin_path
     end
 
     context "when signed in as admin" do
       before do
-        log_in admin
+        sign_in admin
         get :index
       end
 
@@ -38,7 +37,7 @@ RSpec.describe Admin::ProductsController, type: :controller do
   end
 
   describe "GET #edit" do
-    before {log_in admin}
+    before {sign_in admin}
     before {product}
 
     it_behaves_like "shared fetch_object"
@@ -57,14 +56,14 @@ RSpec.describe Admin::ProductsController, type: :controller do
   end
 
   describe "PATCH #update" do
-    before {log_in admin}
+    before {sign_in admin}
     before {product}
 
     it_behaves_like "shared fetch_object"
   end
 
   describe "DELETE #destroy" do
-    before {log_in admin}
+    before {sign_in admin}
     before {product}
 
     it_behaves_like "shared fetch_object"

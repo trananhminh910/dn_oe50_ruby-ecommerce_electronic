@@ -1,0 +1,45 @@
+<% provide :title, t("devises.sign_up") %>
+<h2><%= t "devises.sign_up" %></h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+  <div class="field">
+    <%= f.label t "devises.email" %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <small><i><%= show_message_for_field(resource, :email) %></i></small>
+  </div>
+
+  <div class="field">
+    <%= f.label t "devises.name" %><br />
+    <%= f.text_field :name, autocomplete: "name" %>
+    <small><i><%= show_message_for_field(resource, :name) %></i></small>
+  </div>
+
+  <div class="field">
+    <%= f.label t "devises.gender" %>
+    <%= f.radio_button(:gender, User.genders.keys.first, :checked => true) %>&nbsp;<%= t "devises.male" %><br>
+    <%= f.radio_button(:gender, User.genders.keys.last) %>&nbsp;<%= t "devises.female" %>
+    <small><i><%= show_message_for_field(resource, :gender) %></i></small>
+  </div>
+
+  <div class="field">
+    <%= f.label t "devises.password" %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> <%= t "devises.characters_minimum" %>)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+    <small><i><%= show_message_for_field(resource, :password) %></i></small>
+  </div>
+
+  <div class="field">
+    <%= f.label t "devises.password_confirmation" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <small><i><%= show_message_for_field(resource, :password_confirmation) %></i></small>
+  </div>
+
+  <div class="actions">
+    <%= f.submit t "devises.sign_up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

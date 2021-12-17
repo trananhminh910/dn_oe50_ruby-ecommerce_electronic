@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /en|vi/ do
     root "static_page#home"
-    get "/login", to: "sessions#new"
-    post "/login", to: "sessions#create"
-    delete "/logout", to: "sessions#destroy"
+    devise_for :users
+    as :user do
+      get "signin" => "devise/sessions#new"
+      post "signin" => "devise/sessions#create"
+      delete "signout" => "devise/sessions#destroy"
+    end
     resources :products, only: [:show]
     resources :orders, only: [:new, :create]
     namespace :admin do

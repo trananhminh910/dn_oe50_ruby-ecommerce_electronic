@@ -17,7 +17,6 @@ RSpec.describe User, type: :model do
   describe "is valid enums" do
     it_behaves_like "shared enum examples", :role, User.roles, :integer
     it_behaves_like "shared enum examples", :gender, User.genders, :boolean
-    it_behaves_like "shared enum examples", :is_active, User.is_actives, :boolean
   end
 
   describe "validations" do
@@ -58,42 +57,6 @@ RSpec.describe User, type: :model do
       it {should validate_presence_of(:password).allow_nil}
       it {should validate_length_of(:password).is_at_least(Settings.length.min_length_password)}
       it {should validate_confirmation_of(:password)}
-    end
-
-    context "has secure password" do
-      it {should have_secure_password}
-    end
-  end
-
-  describe ".new_token" do
-    let(:new_token) {User.new_token}
-
-    it "should return a string" do
-      expect(new_token).to be_kind_of String
-    end
-
-    it "should return invalid length" do
-      expect(new_token.length).to eq(22)
-    end
-  end
-
-  describe ".digest" do
-    let(:digest) {User.digest("111111")}
-
-    it "should present" do
-      expect(digest).not_to be nil
-    end
-
-    it "should return a string" do
-      expect(digest).to be_kind_of String
-    end
-  end
-
-  describe "#remember" do
-    let(:remember_token) {User.digest(User.new_token)}
-
-    it "should present" do
-      expect(remember_token).not_to be nil
     end
   end
 end

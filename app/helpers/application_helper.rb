@@ -12,6 +12,15 @@ module ApplicationHelper
     end
   end
 
+  def show_message_for_field obj, attribute
+    full_messages_for = obj.errors.full_messages_for(attribute)
+    return if full_messages_for.empty?
+
+    content_tag :ul, class: "text-danger" do
+      full_messages_for.map{|msg| concat(content_tag(:li, msg))}
+    end
+  end
+
   def link_to_add_fields name, f_obj, association
     new_object = f_obj.object.send(association).class.new
     id = new_object.object_id
