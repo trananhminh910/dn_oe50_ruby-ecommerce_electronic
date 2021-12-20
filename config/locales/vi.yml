@@ -120,3 +120,23 @@ vi:
     one: "1 Lỗi",
     other: "%{count} Lỗi"
   }
+  devises:
+    email: "Email"
+    name: "Họ Tên"
+    gender: "Giới tính"
+    password: "Mật khẩu"
+    password_confirmation: "Mật khẩu xác nhận"
+    sign_up: "Đăng ký"
+    forgot_password: "Bạn đã quên mật khẩu?"
+    login: "Đăng nhập"
+    male: "Nam"
+    female: "Nữ"
+    send_reset_password_instructions: "Gửi cho tôi hướng dẫn quên mật khẩu"
+    current_password: "Mật khẩu hiện tại"
+    edit_user: "Sửa thông tin cá nhân"
+    require_current_password: "Yêu cầu nhập mật khẩu hiện tại để thay đổi thông tin cá nhân"
+    not_change_password: "Nếu không thay đổi mật khẩu thì để trống"
+    characters_minimum: "số ký tự ít nhất cần nhập"
+    cancel_account_message: "Bạn muốn xóa tài khoản của bạn"
+    cancel_account: "Xóa tài khoản"
+    back: "Quay lại"
