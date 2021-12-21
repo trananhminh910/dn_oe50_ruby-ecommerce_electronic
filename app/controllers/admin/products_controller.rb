@@ -85,7 +85,7 @@ class Admin::ProductsController < Admin::BaseController
   end
 
   def search_with_sort search_keyword, option
-    search_product = Product.search(search_keyword)
+    search_product = Product.searchs(search_keyword)
     settings = Settings.admin.product_option
     @products = case option
                 when settings.oldest

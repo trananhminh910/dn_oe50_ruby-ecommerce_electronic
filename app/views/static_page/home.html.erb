@@ -1,4 +1,5 @@
 <% provide(:title, t("pages.home")) %>
+<%= render "search_form" %>
 <section class="cat_product_area section_gap">
   <div class="container">
     <div class="row flex-row-reverse">
@@ -11,7 +12,11 @@
       <div class="col-lg-9">
         <div class="latest_product_inner">
           <div class="row">
-            <%= render partial: "products/all_product", collection: @products, as: :product %>
+            <% if @products.present? %>
+              <%= render partial: "products/all_product", collection: @products, as: :product %>
+            <% else %>
+              <div><%= t "ransack.not_find_any_product" %></div>
+            <% end %>
           </div>
         </div>
         <%= paginate @products %>

@@ -5,8 +5,10 @@ class Product < ApplicationRecord
   accepts_nested_attributes_for :category, allow_destroy: true
   has_one_attached :image
 
+  ransack_alias :product, :name_or_description
+
   scope :product_order, ->(field){order field}
-  scope :search, ->(keywrd){where("products.name LIKE ? or products.description LIKE ?", "%#{keywrd}%", "%#{keywrd}%")}
+  scope :searchs, ->(keywrd){where("products.name LIKE ? or products.description LIKE ?", "%#{keywrd}%", "%#{keywrd}%")}
 
   validates :image,
             content_type:
@@ -48,5 +50,17 @@ class Product < ApplicationRecord
 
   def display_image_200
     image.variant resize_to_limit: [Settings.admin.product.image.width_200, Settings.admin.product.image.height_200]
+  end
+
+  ransacker :created_at, type: :date do
+    Arel.sql("date(products.created_at)")
+  end
+
+  def self.ransackable_attributes auth_object = nil
+    if auth_object == :admin
+      super
+    else
+      super & %w(product name description price created_at)
+    end
   end
 end

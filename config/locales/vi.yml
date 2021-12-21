@@ -142,3 +142,16 @@ vi:
     back: "Quay lại"
   cancancan:
     no_permission: "Bạn không có quyền truy cập cho thực hiện này"
+  ransack:
+    product_cont: "Tìm kiếm theo tên hoặc thông tin sản phẩm"
+    price_lteq: "Tìm kiếm theo tầm giá trở xuống"
+    category_name_cont: "Tìm kiếm theo danh mục sản phẩm"
+    created_at_date_equals: "Tìm kiếm theo ngày đăng bán sản pẩm"
+    product_name: "Tên sản phẩm"
+    product_discount: "Khuyến mãi"
+    created_at: "Ngày đăng bán"
+    price: "Giá sản phẩm"
+    search: "Thực hiện tìm kiếm"
+    sort_by: "Tìm kiếm theo"
+    click_to_search: "Nhấp để tìm kiếm, lọc sản phẩm bạn muốn xem"
+    not_find_any_product: "Không tìm thấy sản phẩm nào"

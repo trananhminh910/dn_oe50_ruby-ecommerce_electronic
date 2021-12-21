@@ -1,0 +1,41 @@
+<div class="search-product col-sm-12">
+  <button class="btn btn-default col-sm-12">
+    <%= t "ransack.click_to_search" %>
+  </button>
+</div>
+<div class="search-product-form">
+  <%= search_form_for(@q, url: root_path, method: :get) do |f| %>
+    <%= f.label t "ransack.product_cont" %>
+    <%= f.search_field :product_cont %>
+    <%= f.label t "ransack.price_lteq" %>
+    <%= f.search_field :price_lteq %>
+    <%= f.label t "ransack.category_name_cont" %>
+    <%= f.search_field :category_name_cont %>
+    <%= f.label t "ransack.created_at_date_equals" %>
+    <%= f.search_field :created_at_date_equals %>
+    <%= f.submit t "ransack.search" %>
+  <% end %>
+  <p><%= t("ransack.sort_by") %>: </p>
+  <div class="row">
+    <div class="col-sm-3">
+      <button class="btn col-sm-12">
+        <%= sort_link(@q, :name, t("ransack.product_name")) %>
+      </button>
+    </div>
+    <div class="col-sm-3">
+      <button class="btn col-sm-12">
+        <%= sort_link(@q, :discount, t("ransack.product_discount")) %>
+      </button>
+    </div>
+    <div class="col-sm-3">
+      <button class="btn col-sm-12">
+        <%= sort_link(@q, :created_at, t("ransack.created_at"), default_order: :desc) %>
+      </button>
+    </div>
+    <div class="col-sm-3">
+      <button class="btn col-sm-12">
+        <%= sort_link(@q, :price, t("ransack.price"), default_order: :desc) %>
+      </button>
+    </div>
+  </div>
+</div>

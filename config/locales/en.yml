@@ -143,3 +143,16 @@ en:
     change_password: "Change password"
   cancancan:
     no_permission: "you don't permission this access"
+  ransack:
+    product_cont: "Search by name or description products"
+    price_lteq: "Search lesster than price products"
+    category_name_cont: "Search by category products"
+    created_at_date_equals: "Search by create at"
+    product_name: "Product name"
+    product_discount: "Product discount"
+    created_at: "Create at"
+    price: "Product Price"
+    search: "Search products"
+    sort_by: "Sort by"
+    click_to_search: "Click here to search and sort product which you want see"
+    not_find_any_product: "Not find to any product"

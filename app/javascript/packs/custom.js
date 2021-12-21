@@ -17,3 +17,8 @@ $(".remove-fields").on("click", () => {
   $(".category-existed").show("1000")
   $(".category-name").val("")
 })
+
+$(".search-product-form").hide("2000");
+$(".search-product").on("click", () => {
+  $(".search-product-form").toggle("2000");
+})
