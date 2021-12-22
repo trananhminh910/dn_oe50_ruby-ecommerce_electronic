@@ -156,3 +156,12 @@ en:
     sort_by: "Sort by"
     click_to_search: "Click here to search and sort product which you want see"
     not_find_any_product: "Not find to any product"
+  chartkick:
+    welcome_dashboard: "Welcome to Your Dashboard"
+    each_status: "Order status"
+    money_month: "Total of money by month"
+    money_quarter: "Total of money by quarter"
+    money_year: "Total of money by year"
+    order_month: "Order by month"
+    order_quarter: "Order by quarter"
+    order_year: "Order by year"

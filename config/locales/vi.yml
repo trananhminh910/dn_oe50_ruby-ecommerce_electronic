@@ -155,3 +155,12 @@ vi:
     sort_by: "Tìm kiếm theo"
     click_to_search: "Nhấp để tìm kiếm, lọc sản phẩm bạn muốn xem"
     not_find_any_product: "Không tìm thấy sản phẩm nào"
+  chartkick:
+    welcome_dashboard: "Chào mừng bạn đến với trang quản trị - thống kê"
+    each_status: "Thống kê tình trạng đơn hàng"
+    money_month: "Doanh thu theo tháng"
+    money_quarter: "Doanh thu theo quý"
+    money_year: "Doanh thu theo năm"
+    order_month: "Hóa đơn đã duyệt theo tháng"
+    order_quarter: "Hóa đơn đã duyệt theo quý"
+    order_year: "Hóa đơn đã duyệt theo năm"

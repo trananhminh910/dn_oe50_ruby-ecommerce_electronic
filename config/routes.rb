@@ -13,6 +13,13 @@ Rails.application.routes.draw do
       root "static_pages#index"
       resources :orders, only: [:index, :edit, :update]
       resources :products
+      get :order_status, to: "static_pages#order_status"
+      get :order_total_money_month, to: "static_pages#order_total_money_month"
+      get :order_total_money_quarter, to: "static_pages#order_total_money_quarter"
+      get :order_total_money_year, to: "static_pages#order_total_money_year"
+      get :order_accept_month, to: "static_pages#order_accept_month"
+      get :order_accept_quarter, to: "static_pages#order_accept_quarter"
+      get :order_accept_year, to: "static_pages#order_accept_year"
     end
 
     resources :carts, only: [:index] do

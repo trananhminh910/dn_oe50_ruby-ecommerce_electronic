@@ -96,7 +96,7 @@ end
   )
 end
 
-30.times do |n|
+50.times do |n|
   status = rand(0..3)
   shipping_fee = 20000
   total_of_money = 222222
