@@ -81,13 +81,13 @@ RSpec.describe Product, type: :model do
 
       it "should find to products" do
         keyword = "a"
-        product_order = Product.search keyword
+        product_order = Product.searchs keyword
         expect(product_order).to eq [product_1, product_2, product_3, product_4]
       end
 
       it "should not find to product" do
         keyword = "minh"
-        product_order = Product.search keyword
+        product_order = Product.searchs keyword
         expect(product_order).to eq []
       end
     end

@@ -63,3 +63,20 @@
 .alert-alert {
   background-color: $color-danger;
 }
+
+.Facebook {
+  color: $color-white;
+}
+
+.GoogleOauth2 {
+  color: $color-white;
+}
+
+.btn-Facebook {
+  background-color: $color-facebook;
+}
+
+.btn-GoogleOauth2 {
+  margin-top: 5px;
+  background-color: $color-google;
+}

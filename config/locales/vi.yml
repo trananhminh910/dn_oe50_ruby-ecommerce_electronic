@@ -140,6 +140,8 @@ vi:
     cancel_account_message: "Bạn muốn xóa tài khoản của bạn"
     cancel_account: "Xóa tài khoản"
     back: "Quay lại"
+    change_password: "Thay đổi mật khẩu"
+    login_with: "Đăng nhập bằng tài khoản"
   cancancan:
     no_permission: "Bạn không có quyền truy cập cho thực hiện này"
   ransack:
